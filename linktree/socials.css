@@ -1,0 +1,41 @@
+
+  #social-test {
+    text-align: center;
+    font-size: 30px;
+  }
+  #social-test .social {
+    padding-left: 0px;
+  }
+  #social-test li {
+    display: inline-block;
+  }
+  #social-test li a {
+    color: rgba(255, 255, 255, 0.6);
+    border-radius: 6px;
+    list-style-type: none;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    padding: 1%;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+    transition: ease 0.3s;
+  }
+  #social-test li a:hover {
+    color: #ffffff;
+    border: 1px solid #ffffff;
+  }
+  .social:hover > li {
+    opacity: 0.5;
+  }
+  .social:hover > li:hover {
+    opacity: 1;
+  }
+  .credits,
+  .credits a {
+    font-size: 20px;
+    font-family: Open Sans;
+    color: rgba(255, 255, 255, 0.6);
+  }
+  
