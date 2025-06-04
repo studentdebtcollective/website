@@ -23,9 +23,31 @@
           gtag('js', new Date());
 
           gtag('config', 'UA-217164909-1');
+
+          gtag('event', 'landing_page_view', {
+            'source': sourceValue
+          });
         </script>
     </head>
     <body>
+        <script>
+            // Grab query parameters from URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const sourceValue = urlParams.get('source');
+        
+            // Display on page for demo
+            const info = document.getElementById('source-info');
+            if (sourceValue) {
+              info.textContent = `You came from source: ${sourceValue}`;
+              
+              // Send custom event to Google Analytics
+              gtag('event', 'landing_page_view', {
+                source: sourceValue
+              });
+            } else {
+              info.textContent = 'No source parameter found.';
+            }
+          </script>
         <!-- Navigation-->
         <nav class="navbar navbar-light bg-light static-top">
             <div class="container">
